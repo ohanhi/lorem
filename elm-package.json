@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Placeholder text for your Elm apps",
-    "repository": "https://github.com/user/project.git",
+    "repository": "https://github.com/ohanhi/lorem.git",
     "license": "BSD3",
     "source-directories": [
         "src"
