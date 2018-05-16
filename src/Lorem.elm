@@ -1,18 +1,23 @@
 module Lorem
     exposing
-        ( words
+        ( paragraphs
         , sentence
-        , paragraphs
+        , words
         , wrapInHtml
         )
 
 {-| This package provides placeholder text for Elm apps.
 
+
 # Plain text
+
 @docs words, sentence, paragraphs
 
+
 # Html
+
 @docs wrapInHtml
+
 -}
 
 import Html exposing (Html)
@@ -23,6 +28,7 @@ import Html exposing (Html)
     >>> words 5
 
     [ "Lorem", "ipsum", "dolor", "sit", "amet," ]
+
 -}
 words : Int -> List String
 words n =
@@ -38,6 +44,7 @@ words n =
     >>> sentence 10
 
     "Lorem ipsum dolor sit amet, his viris voluptaria ut. Sea"
+
 -}
 sentence : Int -> String
 sentence n =
@@ -53,6 +60,7 @@ sentence n =
     , "Ei legere accumsan sit. Id meis intellegat nec, modo habeo error cum eu. Illud ubique in ius. Meliore nostrum eos an, facilisis reformidans quo in. Ne eruditi assueverit vix, graece eleifend mandamus ut usu. Vis nulla splendide ad."
     , "Officiis tractatos at sed. Vim ad ipsum ceteros. Posse adolescens ei eos, meliore albucius facilisi id vel, et vel tractatos partiendo. Cu has insolens constituam, sint ubique sit te, vim an legimus elaboraret. Omnes possim mei et. Equidem contentiones vituperatoribus ut vel, duis veri platonem vel ei, an integre consequat democritum qui."
     ]
+
 -}
 paragraphs : Int -> List String
 paragraphs n =
@@ -68,6 +76,7 @@ paragraphs n =
     ...     |> wrapInHtml (p [])
 
     [ p [] [ text "Lorem" ], p [] [ text "ipsum" ], p [] [ text "dolor" ] ]
+
 -}
 wrapInHtml : (List (Html msg) -> Html msg) -> List String -> List (Html msg)
 wrapInHtml wrapper list =
@@ -79,6 +88,7 @@ appendUntilAtLeast : Int -> List String -> List String
 appendUntilAtLeast n stringList =
     if List.length stringList >= n then
         stringList
+
     else
         appendUntilAtLeast n (source ++ stringList)
 
