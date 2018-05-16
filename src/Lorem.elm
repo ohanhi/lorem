@@ -25,9 +25,9 @@ import Html exposing (Html)
 
 {-| Gives a list of single words of lorem ipsum.
 
-    >>> words 5
+    words 5
 
-    [ "Lorem", "ipsum", "dolor", "sit", "amet," ]
+    --> [ "Lorem", "ipsum", "dolor", "sit", "amet," ]
 
 -}
 words : Int -> List String
@@ -41,9 +41,9 @@ words n =
 
 {-| Gives a sentence (a long string) of words of lorem ipsum.
 
-    >>> sentence 10
+    sentence 10
 
-    "Lorem ipsum dolor sit amet, his viris voluptaria ut. Sea"
+    --> "Lorem ipsum dolor sit amet, his viris voluptaria ut. Sea"
 
 -}
 sentence : Int -> String
@@ -54,12 +54,12 @@ sentence n =
 
 {-| Gives a list of paragraphs of lorem ipsum. They will repeat after a few.
 
-    >>> paragraphs 3
+    paragraphs 3
 
-    [ "Lorem ipsum dolor sit amet, his viris voluptaria ut. Sea ad iusto labitur constituam, viris persius nonumes pro at, detraxit expetendis eu sed. Ut perpetua consequat complectitur sea, eam reque graeci et. Dignissim euripidis intellegat sed ex."
-    , "Ei legere accumsan sit. Id meis intellegat nec, modo habeo error cum eu. Illud ubique in ius. Meliore nostrum eos an, facilisis reformidans quo in. Ne eruditi assueverit vix, graece eleifend mandamus ut usu. Vis nulla splendide ad."
-    , "Officiis tractatos at sed. Vim ad ipsum ceteros. Posse adolescens ei eos, meliore albucius facilisi id vel, et vel tractatos partiendo. Cu has insolens constituam, sint ubique sit te, vim an legimus elaboraret. Omnes possim mei et. Equidem contentiones vituperatoribus ut vel, duis veri platonem vel ei, an integre consequat democritum qui."
-    ]
+    --> [ "Lorem ipsum dolor sit amet, his viris voluptaria ut. Sea ad iusto labitur constituam, viris persius nonumes pro at, detraxit expetendis eu sed. Ut perpetua consequat complectitur sea, eam reque graeci et. Dignissim euripidis intellegat sed ex."
+        , "Ei legere accumsan sit. Id meis intellegat nec, modo habeo error cum eu. Illud ubique in ius. Meliore nostrum eos an, facilisis reformidans quo in. Ne eruditi assueverit vix, graece eleifend mandamus ut usu. Vis nulla splendide ad."
+        , "Officiis tractatos at sed. Vim ad ipsum ceteros. Posse adolescens ei eos, meliore albucius facilisi id vel, et vel tractatos partiendo. Cu has insolens constituam, sint ubique sit te, vim an legimus elaboraret. Omnes possim mei et. Equidem contentiones vituperatoribus ut vel, duis veri platonem vel ei, an integre consequat democritum qui."
+        ]
 
 -}
 paragraphs : Int -> List String
@@ -70,12 +70,12 @@ paragraphs n =
 
 {-| Gives single words of lorem ipsum wrapped with the given Html node.
 
-    >>> import Html exposing (p, text)
+    import Html exposing (p, text)
 
-    >>> words 3
-    ...     |> wrapInHtml (p [])
+    words 3
+         |> wrapInHtml (p [])
 
-    [ p [] [ text "Lorem" ], p [] [ text "ipsum" ], p [] [ text "dolor" ] ]
+    --> [ p [] [ text "Lorem" ], p [] [ text "ipsum" ], p [] [ text "dolor" ] ]
 
 -}
 wrapInHtml : (List (Html msg) -> Html msg) -> List String -> List (Html msg)
